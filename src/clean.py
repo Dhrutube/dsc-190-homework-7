@@ -12,7 +12,7 @@ df = df[df['event_type'].isin(valid_event_types)]
 df = df[df['duration_seconds'] > 0]
 df["duration_seconds"] = df["duration_seconds"].astype(int)
 # normalizing timestamp to ISO 8601
-df['timestamp'] = pd.to_datetime(df['timestamp'], dayfirst=False, format='mixed').dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+df['timestamp'] = pd.to_datetime(df['timestamp'], dayfirst=False, format='mixed').dt.strftime('%Y-%m-%dT%H:%M:%S')
 # writing clean data
 Path("data/clean").mkdir(parents=True, exist_ok=True)
 df.to_csv('data/clean/events.csv')

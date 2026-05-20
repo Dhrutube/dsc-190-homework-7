@@ -11,3 +11,9 @@ stages:
     - data/clean/events.csv
     outs:
     - data/transformed/events.csv
+  features:
+    cmd: uv run features.py
+    deps:
+    - data/transformed/events.csv
+    outs:
+    - data/features/events.csv

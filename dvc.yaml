@@ -6,13 +6,13 @@ stages:
     outs:
     - data/clean/events.csv
   transform:
-    cmd: uv run transform.py
+    cmd: uv run src/transform.py
     deps:
     - data/clean/events.csv
     outs:
     - data/transformed/events.csv
   features:
-    cmd: uv run features.py
+    cmd: uv run src/features.py
     deps:
     - data/transformed/events.csv
     outs:

@@ -1,0 +1,15 @@
+[project]
+name = "dsc-190-homework-7"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "marimo>=0.23.6",
+    "pandas>=3.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "dvc>=3.67.1",
+]
